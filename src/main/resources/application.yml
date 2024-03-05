@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+fono:
+  baseUrl: https://fonoapi.freshpixl.com/
+  accessToken: token
