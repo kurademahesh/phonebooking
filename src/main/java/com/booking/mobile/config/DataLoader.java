@@ -45,7 +45,7 @@ public class DataLoader implements CommandLineRunner {
 	// TODO: Instead of traveling and updating all records, can set flag for new
 	// records and update only those records via cron
 
-	@Scheduled(cron = "1 * * * * *")
+	@Scheduled(cron = "0 0 0 * * *")
 	public void loadExtraPhoneDetails() {
 		log.info("updating data");
 		List<PhoneEntity> phoneEntities = phoneRepository.findAll();
