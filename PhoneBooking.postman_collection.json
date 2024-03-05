@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "d9e549ff-365b-41a7-be36-920bc5f0bd24",
+		"name": "PhoneBooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3224921",
+		"_collection_link": "https://grey-shuttle-856930.postman.co/workspace/MobileDemo~781294f4-3ce6-43cb-99ec-5e63cd6ba7dc/collection/3224921-d9e549ff-365b-41a7-be36-920bc5f0bd24?action=share&source=collection_link&creator=3224921"
+	},
+	"item": [
+		{
+			"name": "Get All Phones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/phones?page=0&size=52",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phones"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "52"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Phone Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/phones/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phones",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reserve Phone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phoneId\": 1,\n    \"bookedBy\": \"mahesh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/phones/reserve",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phones",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Phone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/phones/1/return",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phones",
+						"1",
+						"return"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Audits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/phones/audits/1?page=0&size=100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phones",
+						"audits",
+						"1"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
